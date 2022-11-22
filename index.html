@@ -10,11 +10,111 @@
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
             rel="stylesheet"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        />
         <link rel="stylesheet" href="assets/styles/reset.css" />
         <link rel="stylesheet" href="assets/styles/globalstyles.css" />
+        <link rel="stylesheet" href="assets/styles/header.css" />
+        <link rel="stylesheet" href="assets/styles/banner.css" />
         <title>Document</title>
     </head>
     <body>
-        <div class="container"><p style="font-size: 30px">Hello</p></div>
+        <div class="container">
+            <header class="header">
+                <div class="header__logo">
+                    <p class="brand__name">NIKE</p>
+                    <img src="./assets/images/nike-icon.png" />
+                </div>
+                <nav class="header__navbar">
+                    <ul class="navbar__list">
+                        <li class="navbar__item">
+                            <a href="#">Men</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#">Women</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#">Kids</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#">Customise</a>
+                        </li>
+                        <li class="navbar__item">
+                            <div>
+                                <img
+                                    src="./assets/images/ic_baseline-search.png"
+                                    alt=""
+                                />
+                                <input type="text" placeholder="Search" />
+                            </div>
+                        </li>
+                        <li class="navbar__item" id="mobile-btn">
+                            <i
+                                class="fa-solid fa-bars"
+                                id="mobile-btn"
+                                onclick="handleMobileNav()"
+                            ></i>
+                        </li>
+                        <li class="navbar__item">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </li>
+                    </ul>
+                </nav>
+                <section class="mobile-nav">
+                    <ul>
+                        <li>
+                            <a href="#">Men</a>
+                        </li>
+                        <li>
+                            <a href="#">Women</a>
+                        </li>
+                        <li><a href="#">Kids</a></li>
+                        <li>
+                            <a href="#">Customise</a>
+                        </li>
+                        <li>
+                            <a href="#">Cart</a>
+                        </li>
+                    </ul>
+                </section>
+            </header>
+            <main class="main">
+                <section class="main__main-content">
+                    <div class="slogan">
+                        <p>JUST</p>
+                        <p>DO</p>
+                        <p>IT</p>
+                    </div>
+                    <p class="text">
+                        Innovated to withstand your toughest matches, this
+                        updated design puts flexible, durable materials exactly
+                        where they're needed most.
+                    </p>
+                    <div class="shoe-box">
+                        <div class="product-info">
+                            <p>NikeCourt Zoom Vapor Cage 4 Rafa</p>
+                        </div>
+                        <img src="./assets/images/nike-blue.png" />
+                    </div>
+                </section>
+                <section class="main__products">
+                    <button>SHOP NOW</button>
+                    <ul class="products-list">
+                        <li class="product" data="rafa-hard-court">
+                            <img src="./assets/images/nike-black.png" />
+                        </li>
+                        <li class="product" data="pro-hard-court">
+                            <img src="./assets/images/nike-white.png" />
+                        </li>
+                        <li class="product" data="Vapor Cage 4 Rafa">
+                            <img src="./assets/images/nike-black.png" />
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+        <script src="./assets/scripts/index.js"></script>
     </body>
 </html>

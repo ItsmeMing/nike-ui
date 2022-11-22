@@ -1,0 +1,212 @@
+@import "./variables.scss";
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 21px;
+    height: 100px;
+    @media screen and (max-width: 640px) {
+        height: 80px;
+    }
+    .header__logo {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        .brand__name {
+            font-weight: bold;
+            color: $white;
+        }
+        img {
+            display: block;
+            height: auto;
+            transform: rotate(0deg);
+            animation: 2s test infinite;
+            animation-direction: alternate;
+            @media screen and (max-width: 640px) {
+                width: 75px;
+            }
+        }
+    }
+    .header__navbar {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        .navbar__list {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            height: inherit;
+            .navbar__item {
+                &:nth-child(5) {
+                    margin-left: 20px;
+                    div {
+                        position: relative;
+                        width: 120px;
+                        height: 27px;
+                        background-color: $gray;
+                        border-radius: 20px;
+                        img {
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            left: 10%;
+                            transform: translateY(-50%);
+                        }
+                        input {
+                            font-family: "Poppins", sans-serif;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            font-size: 14px;
+                            width: 70%;
+                            height: inherit;
+                            float: right;
+                            padding: 0;
+                            border: none;
+                            background-color: transparent;
+                            &:focus-visible {
+                                outline: none;
+                            }
+                        }
+                        ::placeholder {
+                            font-family: "Poppins", sans-serif;
+                            text-align: left;
+                            font-size: 11px;
+                        }
+                    }
+                }
+                &:nth-child(6),
+                &:last-child {
+                    color: $white;
+                    cursor: pointer;
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+                &:not(:nth-child(6), :nth-child(5)) {
+                    display: block;
+                    @media screen and (max-width: 1024px) {
+                        display: none;
+                    }
+                }
+                &:nth-child(6) {
+                    display: none;
+                    @media screen and (max-width: 1024px) {
+                        display: block;
+                    }
+                }
+                a {
+                    display: block;
+                    position: relative;
+                    color: $white;
+                    transition: color 0.5s;
+                    &::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        top: calc(100% + 5px);
+                        width: 0;
+                        height: 2px;
+                        background-color: $yellow;
+                        border-radius: 10px;
+                        transition: width 0.5s cubic-bezier(0, 1.56, 0.56, 1.01);
+                    }
+                    &:hover {
+                        color: $yellow;
+                        &::before {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mobile-nav {
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        right: -200%;
+        width: fit-content;
+        background: linear-gradient(129.86deg, #db7b4b 24.22%, #8f3d14 72.75%);
+        float: right;
+        transition: right 0.5s cubic-bezier(0.13, 1.53, 0.93, 1.02);
+        ul {
+            padding: 10px;
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+                a {
+                    display: block;
+                    position: relative;
+                    font-weight: 600;
+                    font-size: 16px;
+                    text-align: right;
+                    padding: 2.5vh 2.5vw 2.5vh 7.5vw;
+                    border: 2px solid transparent;
+                    @media screen and (max-width: 640px) {
+                        padding-left: 15vw;
+                    }
+                    &::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        left: 20%;
+                        top: calc(0% - 2px);
+                        width: 0;
+                        height: 2px;
+                        background: linear-gradient(
+                            to right,
+                            #148f86 24.22%,
+                            #4bdbd1 72.75%
+                        );
+                        border-radius: 10px;
+                        transition: width 0.2s linear;
+                    }
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        right: calc(0% - 2px);
+                        bottom: 17.5%;
+                        width: 2px;
+                        height: 0;
+                        background: linear-gradient(
+                            -180deg,
+                            #148f86 24.22%,
+                            #4bdbd1 72.75%
+                        );
+                        border-radius: 10px;
+                        transition: height 0.2s linear;
+                    }
+                    &:hover {
+                        color: $white;
+                        &::before {
+                            width: 80%;
+                        }
+                        &::after {
+                            height: 65%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mobile-nav.active {
+        right: 0;
+    }
+}
+
+@keyframes test {
+    from {
+        transform: rotate(22.5deg);
+    }
+    to {
+        transform: rotate(-22.5deg);
+    }
+}

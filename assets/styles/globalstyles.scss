@@ -1,6 +1,19 @@
+html {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     text-rendering: optimizeSpeed;
+    overflow-x: clip;
+    background: linear-gradient(
+        129.86deg,
+        #21e8c4 -20.42%,
+        #179b93 -3.13%,
+        #267b87 24.22%,
+        #0f474f 72.75%
+    ); 
 }
 
 a:-webkit-any-link {
@@ -11,15 +24,8 @@ a:-webkit-any-link {
 
 .container {
     margin: 0 auto;
-    height: 100vh;
     width: 1496px;
-    background: linear-gradient(
-        129.86deg,
-        #21e8c4 -20.42%,
-        #179b93 -3.13%,
-        #267b87 24.22%,
-        #0f474f 72.75%
-    );
+
     @media screen and (max-width: 1538px) {
         width: 1240px;
     }
@@ -34,5 +40,9 @@ a:-webkit-any-link {
     }
     @media screen and (max-width: 640px) {
         width: 100%;
+        > * {
+            width: 90%;
+            margin: 0 auto;
+        }
     }
 }
