@@ -266,8 +266,8 @@
     box-shadow: none;
   }
   50% {
-    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #FAFF23, 0 0 82px #FAFF23, 0 0 92px #FAFF23, 0 0 102px #FAFF23, 0 0 151px #FAFF23;
-    box-shadow: 0 0 0.2rem #FFFFFF, 0 0 0.2rem #FFFFFF, 0 0 2rem #FAFF23, 0 0 0.8rem #FAFF23, 0 0 2.8rem #FAFF23, inset 0 0 1.3rem #FAFF23;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #FAFF23, 0 0 82px #FAFF23, 0 0 92px #FAFF23;
+    box-shadow: 0 0 0.2rem #FFFFFF, 0 0 0.2rem #FFFFFF, 0 0 2rem #FAFF23, 0 0 0.8rem #FAFF23, 0 0 1.8rem #FAFF23;
   }
   100% {
     text-shadow: none;
@@ -281,8 +281,8 @@
     box-shadow: none;
   }
   50% {
-    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #FAFF23, 0 0 82px #FAFF23, 0 0 92px #FAFF23, 0 0 102px #FAFF23, 0 0 151px #FAFF23;
-    box-shadow: 0 0 0.2rem #FFFFFF, 0 0 0.2rem #FFFFFF, 0 0 2rem #FAFF23, 0 0 0.8rem #FAFF23, 0 0 2.8rem #FAFF23, inset 0 0 1.3rem #FAFF23;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #FAFF23, 0 0 82px #FAFF23, 0 0 92px #FAFF23;
+    box-shadow: 0 0 0.2rem #FFFFFF, 0 0 0.2rem #FFFFFF, 0 0 2rem #FAFF23, 0 0 0.8rem #FAFF23, 0 0 1.8rem #FAFF23;
   }
   100% {
     text-shadow: none;

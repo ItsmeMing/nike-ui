@@ -231,10 +231,9 @@
 
     50% {
         text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
-            0 0 42px $yellow, 0 0 82px $yellow, 0 0 92px $yellow,
-            0 0 102px $yellow, 0 0 151px $yellow;
+            0 0 42px $yellow, 0 0 82px $yellow, 0 0 92px $yellow;
         box-shadow: 0 0 0.2rem $white, 0 0 0.2rem $white, 0 0 2rem $yellow,
-            0 0 0.8rem $yellow, 0 0 2.8rem $yellow, inset 0 0 1.3rem $yellow;
+            0 0 0.8rem $yellow, 0 0 1.8rem $yellow;
     }
     100% {
         text-shadow: none;
